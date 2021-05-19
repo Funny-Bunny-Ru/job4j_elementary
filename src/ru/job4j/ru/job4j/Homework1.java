@@ -8,6 +8,9 @@ public class Homework1 {
         // gender of the person / пол человека
         String S1 = "male";
         System.out.println(S1);
+        // gender of the person / пол человека
+        char c1 = 'M';
+        System.out.println(c1);
         // height of person in metres / рост человека в метрах
         float height = 1.82F;
         System.out.println(height);
@@ -23,6 +26,9 @@ public class Homework1 {
         // work permission / разрешение на работу
         String S2 = "Yes";
         System.out.println(S2);
+        // work permission / разрешение на работу
+        boolean per = true;
+        System.out.println(per);
         // file size / размер файла
         float file = 38.65F;
         System.out.println(file);
