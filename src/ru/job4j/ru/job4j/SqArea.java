@@ -9,7 +9,7 @@ public class SqArea {
         return(Math.pow(p/(2*(k+1)), 2) * k);
     }
     public static void main(String[] args){
-        double result = SqArea.square(6, 2);
+        double result = SqArea.square(4, 1);
         System.out.println("P=4, K=1, S=1, real = " + result);
     }
 }
