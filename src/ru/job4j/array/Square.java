@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 public class Square {
-    @SuppressWarnings("checkstyle:NoWhitespaceAfter")
+
     public static int[] calculate(int bound) {
         int[] rst = new int[bound];
         for (int number = 0; number < rst.length; number++) {
@@ -12,8 +12,8 @@ public class Square {
 
     public static void main(String[] args) {
         int[] array = calculate(4);
-        for (int index = 0; index < array.length; index++) {
-            System.out.println(array[index]);
+        for (int index : array) {
+            System.out.println(index);
         }
     }
 }
