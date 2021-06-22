@@ -7,9 +7,8 @@ public class Defragment {
                 int point = index;
                 for (point = point + 1; point < array.length; point++) {
                     if (array[point] != null) {
-                        String temp = array[index];
                         array[index] = array[point];
-                        array[point] = temp;
+                        array[point] = null;
                         break;
                     }
                     System.out.print(array[index] + " ");
