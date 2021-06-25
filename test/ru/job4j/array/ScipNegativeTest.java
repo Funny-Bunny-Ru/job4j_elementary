@@ -11,7 +11,7 @@ public class ScipNegativeTest {
                 {1, -2},
                 {1, 2}
         };
-        int[][] result = SkipNegative.skip(array);
+        int[][] result = SkipNegativeNumbers.skip(array);
         int[][] expected = {
                 {1, 0},
                 {1, 2}
@@ -27,7 +27,7 @@ public class ScipNegativeTest {
                 {1, -2, 3, -4},
                 {1, 2, -3, -4, 5}
         };
-        int[][] result = SkipNegative.skip(array);
+        int[][] result = SkipNegativeNumbers.skip(array);
         int[][] expected = {
                 {1, 0},
                 {1, 2, 0},

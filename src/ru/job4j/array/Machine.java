@@ -3,18 +3,18 @@ package ru.job4j.array;
 import java.util.Arrays;
 
 public class Machine {
-    public static int[] change(int money, int price) { // метод с целочисленным массивом change принимает целочисленное значение "вносимые деньги" и "стоимость товара"
-        int[] coins = {10, 5, 2, 1}; // массив coins содержит номинал монет, которыми можно выдать сдачу
-        int[] rsl = new int[100]; // объявлен массив rsl, создан новый массив с количеством значений в массиве = 100
-        int size = 0; // переменная size (значение длинны массива) присвоено начальное значение ноль, далее оно изменяется на иное
-        int change = money - price; // вводим новую переменную "сумма сдачи" либо можно не вводить а дальше просто использовать money-price
-        for (int i = 0; i < coins.length; i++) { // цикл перебирает индексы массива coins {10, 5, 2, 1} при нижеследующем условии
-            while (change - coins[i] >= 0) { // цикл работает до тех пор, пока сдача минус номинал монеты больше или равен нулю
-                rsl[size] = coins[i]; // после каждого круга цикла, присвоение значений индекса массива coins массиву rsl
-                change -= coins[i]; // уменьшение сдачи на номинал монеты на значение индекса i массива coins возвращает в цикл уже уменьшенную сдачу
-                size++; // добавлять к значению size по 1 при каждом круге по циклу
+    public static int[] change(int money, int price) {
+        int[] coins = {10, 5, 2, 1};
+        int[] result = new int[100];
+        int size = 0;
+        int change = money - price;
+        for (int i = 0; i < coins.length; i++) {
+            while (change - coins[i] >= 0) {
+                result[size] = coins[i];
+                change -= coins[i];
+                size++;
                 }
             }
-        return Arrays.copyOf(rsl, size); // создание массив-копии чтоб усечь массив rsl и не печатать пустые ячейки
+        return Arrays.copyOf(result, size);
     }
 }
